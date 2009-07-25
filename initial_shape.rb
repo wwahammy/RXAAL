@@ -1,0 +1,2 @@
+class InitialShape
+end
