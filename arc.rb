@@ -1,6 +1,8 @@
-class Arc < GraphicPrim
-  attr_accessor :center, :radius, :angle, :depth
-  def initialize
-    super
+module RXaal
+  class Arc < GraphicPrim
+    attr_accessor :center, :radius, :angle, :depth
+    def initialize
+      super
+    end
   end
 end

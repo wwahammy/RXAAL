@@ -1,3 +1,5 @@
-class Shape < XaalElement
-  
+module RXaal
+  class Shape < XaalElement
+    
+  end
 end

@@ -1,5 +1,7 @@
 require 'serializable'
-class Contents
-  include Serializable
-  attr_accessor :text, :lang 
+module RXaal
+  class Contents
+    include Serializable
+    attr_accessor :text, :lang 
+  end
 end

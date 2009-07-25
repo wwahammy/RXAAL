@@ -1,5 +1,7 @@
-class Center < Coordinate
-  def initialize(xpos, ypos)
-    super(xpos,ypos)
+module RXaal
+  class Center < Coordinate
+    def initialize(xpos, ypos)
+      super(xpos,ypos)
+    end
   end
 end

@@ -1,5 +1,7 @@
-class Point < GraphicPrim
-  def initialize
-    super
+module RXaal
+  class Point < GraphicPrim
+    def initialize
+      super
+    end
   end
 end

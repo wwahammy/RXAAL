@@ -1,6 +1,8 @@
-class Triangle < GraphicPrim
-  
-  def initialize
-    super
+module RXaal
+  class Triangle < GraphicPrim
+    
+    def initialize
+      super
+    end
   end
 end

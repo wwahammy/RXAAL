@@ -1,6 +1,9 @@
-class GraphicPrim < InitialShape
-  attr_accessor :hidden, :opacity, :style
-  def initialize
-    super
+module RXaal
+  class GraphicPrim < RXaalObject
+  
+    attr_accessor :hidden, :opacity, :style
+    def initialize
+      super
+    end
   end
 end
