@@ -1,3 +1,4 @@
+require 'graphic_prim'
 module RXaal
   class Polyline < GraphicPrim
     attr_accessor :depth, :coordinates, :closed

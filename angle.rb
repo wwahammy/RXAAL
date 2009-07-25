@@ -1,3 +1,4 @@
+require 'graphic_prim'
 module RXaal
   class Angle < GraphicPrim
     attr_accessor :total, :start
