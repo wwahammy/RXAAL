@@ -2,7 +2,7 @@ require "test/unit"
 require "style"
 require "xaal_element"
 class StyleTest < Test::Unit::TestCase
-  @clazz = Style
+ #@clazz = Style
   def test_initialize
     flunk "Not yet implemented"
   end

@@ -1,0 +1,5 @@
+class StyleContainer < Array
+  
+  
+   
+end

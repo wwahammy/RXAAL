@@ -1,4 +1,4 @@
-require "xaal_element"
+require 'xaal_element'
 module RXaal
   class Style < XaalElement
     attr_accessor :uses

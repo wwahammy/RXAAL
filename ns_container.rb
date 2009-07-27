@@ -21,6 +21,9 @@ module RXaal
       @uri_to_ns[uri] = ns
       @name_to_ns[prefix] = ns
     end
-      
+    
+    def each
+      self.namespaces.each {|n| yield n}
+    end
   end
 end

@@ -1,3 +1,4 @@
+require "rexml/document"
 module RXaal
   module Serializable
     # serializes the current element in the REXML tree with parent as its

@@ -1,6 +1,5 @@
-require "circle"
+require "xaal_doc"
 if __FILE__ == $0
-  circle = Circle.new
-  circle.center=(Center.new(50,0))
-  puts circle.center.xpos
+  doc = RXaal::XaalDoc.new
+  doc.xaal_serialize
 end
