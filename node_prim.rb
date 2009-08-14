@@ -2,7 +2,7 @@ require 'graphic_prim'
 class NodePrim < GraphicPrim
   attr_reader :coordinates
   def initialize(doc, id = nil)
-    super(doc, id = nil)
+    super(doc, id)
     @coordinates = Array.new
   end
   

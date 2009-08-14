@@ -10,7 +10,11 @@ class Module
       end
      end
  end
- 
+ def attr_accessor_of_boolean(*accessor)
+   accessor.each {|a|
+    attr_accessor_bool(a) {|o| o.class == TrueClass || o.class == FalseClass}
+   }
+ end
  def attr_accessor_of_class (klass, *accessor)
    accessor.each {|a|
     attr_accessor_bool(a) {|o| o.class == klass}

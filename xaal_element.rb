@@ -1,7 +1,5 @@
-require "serializable"
-require "r_xaal_config"
 require "rexml/element"
-require "xaalns"
+
 module RXaal
   class XaalElement
     include Serializable
@@ -15,7 +13,7 @@ module RXaal
       if (elem_ns != nil)
         @ns = elem_ns
       else
-        @ns = doc.namespaces.name_to_ns.get("")
+        @ns = doc.namespaces.name_to_ns[""]
       end
     end
     

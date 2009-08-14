@@ -25,7 +25,7 @@ task :buildGenMod do
  }
 end
 
-desc 'Test the restful_authentication plugin.'
+desc 'Test.'
 Rake::TestTask.new(:test) do |t|
   t.pattern = 'Test/*_test.rb'
   t.verbose = true

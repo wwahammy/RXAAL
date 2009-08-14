@@ -1,5 +1,3 @@
-require 'graphic_prim'
-require 'coordinate'
 module RXaal
   class Rectangle < GraphicPrim
     attr_accessor_of_class Integer, :round_x, :round_y, :depth

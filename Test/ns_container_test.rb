@@ -1,8 +1,6 @@
-require "test/unit"
-require "ns_container"
-
-class NSContainerTest < Test::Unit::TestCase
-  
+require "test/test_base"
+class NSContainerTest < TestBase
+  include RXaal
   def test_add_ns
     ns = NSContainer.new
     ns.add_ns("http://sample.com", "new")

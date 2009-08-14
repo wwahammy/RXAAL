@@ -1,10 +1,8 @@
-require 'xaal_element'
-
 module RXaal
   class TopLevelElem < XaalElement
     
-    def initialize
-      super
+    def initialize(doc)
+      super(doc)
     end
   end
 end

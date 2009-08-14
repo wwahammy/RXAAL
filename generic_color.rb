@@ -1,4 +1,5 @@
-require "xaal_serialize"
-class GenericColor
-  include Serializable
+module RXaal
+  class GenericColor
+    include Serializable
+  end
 end

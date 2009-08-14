@@ -1,6 +1,6 @@
-require "test/unit"
-require "module"
-class ModuleTest < Test::Unit::TestCase
+require "test/test_base"
+
+class ModuleTest < TestBase
   attr_accessor_bool(:home) {|n| n.class == String}
   
   attr_accessor_of_class(String, :foo, :bar, :baz)

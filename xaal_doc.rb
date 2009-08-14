@@ -17,12 +17,7 @@
 
 require 'rexml/document'
 require 'rexml/element'
-require "rubygems"
-require "require_all"
 
-require_all '*.rb'
-
-include REXML
 module RXaal
   class XaalDoc
     include Serializable
@@ -39,8 +34,8 @@ module RXaal
       @namespaces.add_ns(XAAL_NS_URI)
       @namespaces.add_ns(XSI_URI, "xsi")
       @top_level_elems = Array.new
-      @metadata = Metadata.new
-      self.styles = StyleContainer.new
+      @metadata = Metadata.new(self)
+      #self.styles = StyleContainer.new
     end
     
     def add_option (name, value)

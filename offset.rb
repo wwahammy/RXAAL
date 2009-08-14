@@ -32,7 +32,7 @@ module RXaal
     
     def base_location=(n)
       if (n.class != RXaal::Coordinate)
-        raise RXaalError "'n' was not of the type RXaal::Coordinate"
+        raise RXaalError("'n' was not of the type RXaal::Coordinate")
       end
       reset_base
       @base_location = n
@@ -40,7 +40,7 @@ module RXaal
     
     def baseline_of=(n)
       if n.class != RXaal::Text
-        raise RXaalError "'n' was not of the type RXaal::Text"
+        raise RXaalError("'n' was not of the type RXaal::Text")
       end
       reset_base
       @baseline_of = n

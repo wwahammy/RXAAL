@@ -1,4 +1,4 @@
-require 'graphic_prim'
+
 module RXaal
   class Line < GraphicPrim
     

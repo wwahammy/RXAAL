@@ -1,11 +1,11 @@
-require "top_level_elem"
 require "rexml/element"
 module RXaal
   class Metadata < TopLevelElem
+    include MetadataMod
     @@DEFAULT_LANG = "en-us"
     
-    def initialize
-      super()
+    def initialize(doc)
+      super(doc)
       @@DEFAULT_LANG.freeze
       @titles = Hash.new
       @subjects = Hash.new
@@ -14,8 +14,9 @@ module RXaal
       @serialize = false
     end
     
-    attr_reader :auth_fname, :auth_lname, :auth_affil, :auth_email
-    attr_reader :app_name, :app_version
+    serialize_accessor_of_class String, :auth_fname, :auth_lname, :auth_affil, :auth_email, 
+            :app_name, :app_version
+    
     # we check if its actually a uri
     attr_reader :app_homepage
       
@@ -59,36 +60,6 @@ module RXaal
     
     def add_desc(title, lang)
       @descs[lang] = desc
-      @serialize = true
-    end
-    
-    def auth_fname=(name)
-      @auth_fname = name
-      @serialize = true
-    end
-    
-    def auth_lname=(name)
-      @auth_lname = name
-      @serialize = true
-    end
-    
-    def auth_affil=(name)
-      @auth_affil = name
-      @serialize = true
-    end
-    
-    def auth_email=(name)
-      @auth_email = name
-      @serialize = true
-    end
-   
-    def app_name=(name)
-      @app_name = name
-      @serialize = true
-    end
-    
-    def app_version=(ver)
-      @app_version = ver
       @serialize = true
     end
     

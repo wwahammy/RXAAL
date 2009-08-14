@@ -1,9 +1,3 @@
-require "offset"
-require "polygon"
+require "rxaal"
 include RXaal
-if __FILE__ == $0
-  offset = Offset.new
-  polygon = Polygon.new
-  offset.base_object= polygon
-  puts offset.base_object
-end
+doc = XaalDoc.new
