@@ -5,13 +5,15 @@
 #the Free Software Foundation, either version 3 of the License, or
 #(at your option) any later version.
 #
-#Foobar is distributed in the hope that it will be useful,
-#but WITHOUT ANY WARRANTY; without even the implied warranty of
-#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#GNU General Public License for more details.
+#  Foobar is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 #
-#You should have received a copy of the GNU General Public License
-#along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+
 
 require 'rexml/document'
 require 'rexml/element'
@@ -24,7 +26,6 @@ include REXML
 module RXaal
   class XaalDoc
     include Serializable
-    include REXML
     XAAL_NS_URI = "http://www.cs.hut.fi/Research/SVG/XAAL"
     XSI_URI = "http://www.w3.org/2001/XMLSchema-instance"
     XAAL_VERSION = "0.1"

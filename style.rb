@@ -1,11 +1,11 @@
 require 'xaal_element'
 module RXaal
   class Style < XaalElement
-    attr_accessor :uses
+    attr_accessor_of_class Style, :uses
     
-    def initialize (uses_style = nil)
+    def initialize (doc, id = nil, uses_style = nil)      
+      super(doc, id)
       @uses = uses_style
-      super
     end
     
     def forward_arrow
@@ -105,20 +105,39 @@ module RXaal
       @stroke_width = new_value
     end
     
-   def font
-      if @font != nil
-        return @font
+   def font_size
+      if @font_size != nil
+        return @font_size
       else
         if self.uses != nil
-          return self.uses.font
+          return self.uses.font_size
         else
           return nil
         end
       end
     end
    
-   def font=(new_value)
-      @font = new_value
+   def font_size=(new_value)
+      @font_size = new_value
+   end
+   
+   def font_family
+      if @font_family != nil
+        return @font_family
+      else
+        if self.uses != nil
+          return self.uses.font_family
+        else
+          return nil
+        end
+      end
     end
+   
+   def font_family=(new_value)
+      @font_family = new_value
+   end
+   
+   
+  
   end
 end

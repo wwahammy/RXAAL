@@ -1,3 +1,5 @@
+require "polyline"
+
 module RXaal
   class Polygon < Polyline
     
@@ -6,10 +8,12 @@ module RXaal
       self.closed=true
     end
     
-    private
     def closed
       super
     end
+    
+    private
+   
     
     def closed=(new_value)
       super

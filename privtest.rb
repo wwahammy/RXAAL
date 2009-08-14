@@ -1,5 +1,9 @@
-require "xaal_doc"
+require "offset"
+require "polygon"
+include RXaal
 if __FILE__ == $0
-  doc = RXaal::XaalDoc.new
-  doc.xaal_serialize
+  offset = Offset.new
+  polygon = Polygon.new
+  offset.base_object= polygon
+  puts offset.base_object
 end

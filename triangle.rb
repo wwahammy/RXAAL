@@ -1,6 +1,6 @@
-require 'graphic_prim'
+require 'node_prim'
 module RXaal
-  class Triangle < GraphicPrim
+  class Triangle < NodePrim
     
     def initialize
       super

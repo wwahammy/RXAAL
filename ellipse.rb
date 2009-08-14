@@ -1,6 +1,6 @@
-require 'graphic_prim'
+require 'node_prim'
 module RXaal
-  class Ellipse < GraphicPrim
+  class Ellipse < NodePrim
     def initialize
       super
     end

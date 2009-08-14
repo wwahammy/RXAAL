@@ -1,0 +1,2 @@
+class RXaalError < StandardError
+end
