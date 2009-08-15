@@ -3,6 +3,7 @@ module RXaal
   class Polyline < NodePrim
     attr_accessor_of_class Integer, :depth
     attr_accessor_of_boolean :closed
+    
     def initialize(doc, id = nil)
       super(doc, id)
     end

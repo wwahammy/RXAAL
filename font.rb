@@ -8,15 +8,18 @@ module RXaal
     end
     
     def xaal_serialize(parent)
-      font = Element.new "font"
-      if size != nil
-        font.attributes["size"] = size
+      if size != nil || family!= nil
+        font = Element.new "font"
+        if @size != nil
+          font.attributes["size"] = @size
+        end
+        if @family != nil
+          font.attributes["family"] = @family
+        end
+        font.attributes["id"] = @id
+        parent.elements << font
       end
-      if family != nil
-        font.attributes["family"] = family
-      end
-      font.attributes["id"] = id
-      parent.elements << font
     end
+  
   end
 end

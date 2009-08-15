@@ -6,6 +6,7 @@ module RXaal
     attr_accessor_of_class XaalNS, :ns
     attr_reader :refs
     attr_reader :id
+    attr_reader :doc
     
     def initialize(doc, id=nil, elem_ns = nil)
       @refs = 0
@@ -15,6 +16,9 @@ module RXaal
       else
         @ns = doc.namespaces.name_to_ns[""]
       end
+      
+      @doc = doc
+      @id = id 
     end
     
     def add_attribute(name, value, attrib_ns = ns)
