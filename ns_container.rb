@@ -20,6 +20,7 @@ module RXaal
       @namespaces.push(ns)
       @uri_to_ns[uri] = ns
       @name_to_ns[prefix] = ns
+      return ns
     end
     
     def each

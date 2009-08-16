@@ -81,7 +81,7 @@ module RXaal
         c.xaal_serialize(style)
       }
       
-      
+      superclass_serialize(style)
     end
   end
 end
