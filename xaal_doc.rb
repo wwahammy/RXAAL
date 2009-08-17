@@ -16,6 +16,7 @@
 
 
 require 'rexml/document'
+require 'rexml/xmldecl'
 
 module RXaal
   class XaalDoc
@@ -53,7 +54,7 @@ module RXaal
     def xaal_serialize(parent=nil)
       
       doc = REXML::Document.new 
-      doc << REXML::Document::DECLARATION
+      doc << REXML::XMLDecl.default
       root = REXML::Element.new "xaal"
       doc.add(root)
       
@@ -83,8 +84,10 @@ module RXaal
       seqs.each { |s|
         s.xaal_serialize(anim)  
       }
+      output_str = String.new
+      doc.write(output_str, 3)
       
-      doc.write($stdout, 3)
+      return output_str
     end
   end
 end

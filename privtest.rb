@@ -18,4 +18,7 @@ par1 = Par.new(doc)
 seq1.pars << par1
 par1.show << pl
 par1.show.type = "selected"
-doc.xaal_serialize
+
+str = doc.xaal_serialize
+
+puts str
