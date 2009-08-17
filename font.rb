@@ -4,7 +4,7 @@ module RXaal
     attr_accessor_of_class String, :family
     
     def initialize (doc, id = nil)
-      super(doc, id)
+      super(doc, id, elem_ns)
     end
     
     def xaal_serialize(parent)

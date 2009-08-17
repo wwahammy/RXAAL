@@ -9,17 +9,17 @@ module RXaal
     attr_accessor_of_class Float, :opacity
     attr_accessor_of_class Style, :style
     
-    def initialize(doc, id = nil)
-      super(doc, id)
+    def initialize(doc, id = nil, elem_ns=nil)
+      super(doc, id, elem_ns)
     end
     
     def superclass_serialize(element)
       super(element)
-      element.attributes["hidden"] = hidden
+      element.attributes["hidden"] = hidden.to_s
       element.attributes["opacity"] = opacity
       style.xaal_serialize(element)
       
-      superclass_serialize(element)
+      
     end
   end
 end

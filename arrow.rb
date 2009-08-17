@@ -2,8 +2,8 @@ module RXaal
   class Arrow < XaalElement
     
     attr_accessor_of_boolean :forward, :backward
-    def initialize(doc, id = nil)
-      super(doc, id)
+    def initialize(doc, id = nil, elem_ns=nil)
+      super(doc, id, elem_ns)
     end
     
     def xaal_serialize(parent)

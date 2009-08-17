@@ -16,7 +16,6 @@
 
 
 require 'rexml/document'
-require 'rexml/element'
 
 module RXaal
   class XaalDoc
@@ -28,6 +27,10 @@ module RXaal
     attr_reader :namespaces
     attr_reader :defs, :global_styles, :metadata
     attr_reader :general_options
+    attr_reader :initials, :seqs
+    
+    attr_reader :custom_top_level_elems
+    
     
     def initialize
       @namespaces = NSContainer.new
@@ -36,11 +39,16 @@ module RXaal
       @top_level_elems = Array.new
       @metadata = Metadata.new(self)
       #self.styles = StyleContainer.new
+      @initials = Array.new
+      @seqs = Array.new
+      @custom_top_level_elems = BoundArray.new(TopLevelElem)
     end
     
     def add_option (name, value)
       self.general_options[name] = value
     end
+    
+    
     
     def xaal_serialize(parent=nil)
       
@@ -64,8 +72,19 @@ module RXaal
       root.add_attribute(@namespaces.uri_to_ns[XSI_URI].prefix << ":schemaLocation", "http://www.cs.hut.fi/Research/SVG/XAAL xaal.xsd")
       
       self.metadata.xaal_serialize(root)
+      init = REXML::Element.new "initial"
+      root.elements << init
       
-      doc.write
+      initials.each { |i|
+        i.xaal_serialize(init)
+      }
+      anim = REXML::Element.new "animation"
+      root.elements << anim
+      seqs.each { |s|
+        s.xaal_serialize(anim)  
+      }
+      
+      doc.write($stdout, 3)
     end
   end
 end

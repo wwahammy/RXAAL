@@ -13,7 +13,10 @@ module RXaal
       e = Element.new "par"
       parent << e
       [:show, :hide].each {|sh|
-        sh.xaal_serialize(e)
+        temp = self.send(sh)
+        if temp.length > 0
+          temp.xaal_serialize(e)
+        end
       }
       
       superclass_serialize(e)

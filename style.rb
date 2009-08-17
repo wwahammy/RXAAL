@@ -3,7 +3,7 @@ module RXaal
     include StyleMod, Serializable
     attr_accessor_of_class Style, :uses
     style_attr_accessor_of_bool :forward_arrow, :backwards_arrow
-    style_attr_accessor_of_class GenericColor, :color, :fill_color
+    attr_accessor :color, :fill_color
     style_attr_accessor_of_class Font, :font
     style_attr_accessor_of_class Stroke, :stroke
     
@@ -78,7 +78,11 @@ module RXaal
       parent.elements << style
       
       [:color, :fill_color, :font, :stroke].each { |c|
-        c.xaal_serialize(style)
+        t = self.send(c)
+        if t != nil
+          t.xaal_serialize(style)  
+        end
+        
       }
       
       superclass_serialize(style)

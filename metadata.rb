@@ -64,7 +64,7 @@ module RXaal
     end
     
     def xaal_serialize(parent)
-      if (self.serialize?)
+      if (serialize?)
         metadata = Element.new "metadata"
         parent.add metadata
       end

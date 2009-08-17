@@ -5,8 +5,8 @@ module RXaal
     attr_accessor_of_class String, :type
     attr_accessor_of_class Integer, :width
     
-    def initialize(doc, id = nil)
-      super(doc, id)
+    def initialize(doc, id = nil, elem_ns=nil)
+      super(doc, id, elem_ns)
     end
     
     def xaal_serialize(parent)
