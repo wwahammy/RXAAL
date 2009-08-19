@@ -10,4 +10,5 @@ spec = Gem::Specification.new do |s|
   s.rdoc_options << '--title' <<  'Builder -- Easy XML Building'
   s.author = "Eric Schultz"
   s.email = "wwahammy@gmail.com"
+  s.rubyforge_project = 'RXAAL'
 end
