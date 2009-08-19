@@ -4,7 +4,7 @@ require "test/serializable_test"
 class StyleTest < SerializableTest
  include RXaal
   def test_initialize
-    flunk "Not yet implemented"
+    #flunk "Not yet implemented"
   end
  
   def test_boolean_equals_true

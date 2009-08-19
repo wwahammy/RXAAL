@@ -3,6 +3,7 @@ require 'rake/testtask'
 require 'rake/gempackagetask'
 require 'rake/rdoctask'
 
+
 desc 'Default: run unit tests.'
 task :default => :test
 
@@ -33,20 +34,8 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
 end
 
-spec = Gem::Specification.new do |s| 
-  s.name = "RXaal"
-  s.version = "0.0.1"
-  s.author = "Eric Schultz"
-  s.email = "wwahammy@gmail.com"
-  s.platform = Gem::Platform::RUBY
-  s.summary = "Some description"
-  s.files = FileList["*/*"].to_a
-  s.require_path = "lib"
-  s.test_files = FileList["test/*test.rb"].to_a
-  s.has_rdoc = true
-  s.extra_rdoc_files = ["README", "COPYING"]
-end
 
+spec = Gem::Specification.load("./rxaal.gemspec")
 desc 'Gem.'
 Rake::GemPackageTask.new(spec) do |pkg| 
   pkg.need_tar = true 
