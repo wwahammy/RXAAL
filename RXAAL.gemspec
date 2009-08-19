@@ -6,8 +6,9 @@ spec = Gem::Specification.new do |s|
   s.files = Dir['lib/**/*.rb'] + Dir['test/**/*.rb']
   s.require_path = 'lib'
   s.has_rdoc = true
+  s.add_dependency("darkfish-rdoc")
   s.extra_rdoc_files = Dir['[A-Z]*']
-  s.rdoc_options << '--title' <<  'Builder -- Easy XML Building'
+  s.rdoc_options << '--title' <<  'RXAAL' << 'darkfish'
   s.author = "Eric Schultz"
   s.email = "wwahammy@gmail.com"
   s.rubyforge_project = 'RXAAL'
