@@ -51,7 +51,7 @@ desc 'RDoc'
 Rake::RDocTask.new("rdoc") do |rdoc|
   rdoc.rdoc_dir = 'html'
   rdoc.title    = "Rake -- Ruby Make"
-  rdoc.options = BASE_RDOC_OPTIONS.dup
+  rdoc.options = BASE_RDOC_OPTIONS.dup 
     
   rdoc.rdoc_files.include('README', 'COPYING')
   rdoc.rdoc_files.include('lib/**/*.rb', 'doc/**/*.rdoc')
